@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Place-Content Combinations</title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            height: 300px;
+            gap: 10px; 
+            padding: 10px;
+            background-color: #f0f0f0;
+            border: 2px solid #ccc; 
+            margin-bottom: 20px;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #4CAF50; 
+            color: white;
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+            font-weight: bold; 
+        }
+        h3 {
+            text-align: center; 
+        }
+    </style>
+</head>
+<body>
+    <h2>Flexbox Place-Content Combinations</h2>
+
+    <h3>place-content: center center;</h3>
+    <div class="container" style="place-content: center center;">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+        <div class="box">Box 4</div>
+        <div class="box">Box 5</div>
+    </div>
+
+    <h3>place-content: flex-start flex-end;</h3>
+    <div class="container" style="place-content: flex-start flex-end;">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+        <div class="box">Box 4</div>
+        <div class="box">Box 5</div>
+    </div>
+
+    <h3>place-content: space-between space-around;</h3>
+    <div class="container" style="place-content: space-between space-around;">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+        <div class="box">Box 4</div>
+        <div class="box">Box 5</div>
+    </div>
+
+    <h3>place-content: space-evenly stretch;</h3>
+    <div class="container" style="place-content: space-evenly stretch;">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+        <div class="box">Box 4</div>
+        <div class="box">Box 5</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Flex-Shrink Example</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-between; 
+            align-items: center; 
+            gap: 10px; 
+            padding: 20px; 
+            background-color: #f0f0f0; 
+            width: 1000px;
+        }
+        .box {
+            width: 300px; 
+            height: 100px; 
+            background-color: #4CAF50; 
+            color: white; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+            font-weight: bold; 
+        }
+        .box:nth-child(1) {
+            flex-shrink: 0; 
+        }
+        .box:nth-child(2) {
+            flex-shrink: 1; 
+        }
+    </style>
+</head>
+<body>
+    <h2>Flexbox Flex-Shrink Example</h2>
+    <div class="container">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+        <div class="box">Box 4</div>
+        <div class="box">Box 5</div>
+    </div>
+</body>
+</html>
