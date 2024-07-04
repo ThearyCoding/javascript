@@ -1,130 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      body {
-        padding: 30px;
-        font: 14px sans-serif;
-        letter-spacing: 1px;
-      }
-      nav {
-        height: 52px;
-        background-color: #0082c8;
-        border: 5px solid #00a7ff;
-        outline: 1px solid #0068a6;
-        border-radius: 12px;
-        display: flex;
-        align-items: stretch;
-      }
-      nav ul {
-        border: 3px solid #0068a6;
-        display: flex;
-        gap: 10px;
-        width: 100%;
-        border-radius: 9px;
-        align-items: center;
-        padding: 0px 10px;
-      }
-      nav ul li {
-        list-style-type: none;
-        position: relative;
-      }
-      nav ul li a {
-        text-decoration: none;
-        font-size: 16px;
-        color: aliceblue;
-        padding: 8px 22px;
-        background-color: #055c9f;
-        border: 1px solid #56bcf2;
-        border-radius: 7px;
-        display: flex;
-        align-items: center;
-        gap: 5px;
-      }
-      nav ul li ul li {
-        box-sizing: content-box;
-        border-left: 1px solid #56bcf2;
-        border-right: 1px solid #56bcf2;
-        border-bottom: #56bcf2;
-      }
-      nav ul li ul li:last-child {
-        border-bottom: none;
-      }
-      nav ul li ul {
-        display: block;
-        position: absolute;
-        z-index: 100;
-        padding: 0px;
-        width: auto;
-        gap: 0;
-        top: 34px;
-        left: 0;
-        height: 0;
-        overflow: hidden;
-        transition: all ease-in-out 600ms;
-        border: none;
-      }
-      nav ul li ul li a {
-        display: block;
-        white-space: nowrap;
-        background-color: transparent;
-        color: #055c9f;
-        font-size: 14px;
-      }
-      nav ul li:hover ul {
-        height: 230px;
-      }
-      nav ul li ul li a:hover {
-        background-color: beige;
-        color: brown;
-        padding-left: 40px;
-      }
-      .has-submenu > a::after {
-        content: "\f0d7";
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-        margin-left: 5px;
-        transition: transform 0.3s;
-      }
-      .has-submenu:hover > a::after {
-        content: "\f0d8";
-      }
-    </style>
-  </head>
-  <body>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li class="has-submenu">
-          <a href="#">Products</a>
-          <ul>
-            <li><a href="#">Computers</a></li>
-            <li><a href="#">Printers</a></li>
-            <li><a href="#">Photocopies</a></li>
-            <li><a href="#">Networks Supply</a></li>
-            <li><a href="#">Accessories</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Services</a></li>
-        <li class="has-submenu">
-          <a href="#">Promotion</a>
-          <ul>
-            <li><a href="#">Baby Promotions</a></li>
-            <li><a href="#">Giant Promotions</a></li>
-          </ul>
-        </li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Contact Us</a></li>
-      </ul>
-    </nav>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drop Down Menu</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      padding: 30px;
+      font: 14px sans-serif;
+      letter-spacing: 1px;
+    }
+    nav {
+      height: 52px;
+      background-color: #0082c8;
+      outline: 1px solid #0068a6;
+      border-radius: 12px;
+      display: flex;
+      align-items: stretch;
+    }
+    nav ul {
+      border: 3px solid #0068a6;
+      display: flex;
+      gap: 10px;
+      width: 100%;
+      border-radius: 9px;
+      align-items: center;
+      padding: 0px 10px;
+    }
+    nav ul li {
+      list-style-type: none;
+      position: relative;
+    }
+    nav ul li a {
+      text-decoration: none;
+      font-size: 16px;
+      color: aliceblue;
+      padding: 8px 22px;
+      background-color: #055c9f;
+      border: 1px solid #56bcf2;
+      border-radius: 7px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    nav ul li ul li {
+      box-sizing: content-box;
+      border-left: 1px solid #56bcf2;
+      border-right: 1px solid #56bcf2;
+      border-bottom: #56bcf2;
+    }
+    nav ul li ul li:last-child {
+      border-bottom: none;
+    }
+    nav ul li ul {
+      display: block;
+      position: absolute;
+      z-index: 100;
+      padding: 0px;
+      width: auto;
+      gap: 0;
+      top: 34px;
+      left: 0;
+      height: 0;
+      overflow: hidden;
+      transition: height ease-in-out 600ms;
+      border: none;
+    }
+    nav ul li ul li a {
+      display: block;
+      white-space: nowrap;
+      background-color: transparent;
+      color: #055c9f;
+      font-size: 14px;
+    }
+    nav ul li:hover ul {
+      height: 230px;
+    }
+    nav ul li ul li a:hover {
+      background-color: beige;
+      color: brown;
+      padding-left: 40px;
+    }
+    .has-submenu > a::after {
+      content: ">";
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      margin-left: 5px;
+      transition: transform 0.3s;
+      display: inline-block;
+      transform: rotate(90deg);
+      width: 24px;
+      height: 24px; 
+      font-size: 10px;
+      line-height: 24px; 
+      text-align: center; 
+      background-color: #055c9f;
+      border-radius: 50%; 
+      color: aliceblue;
+      border: 1px solid #56bcf2; 
+    }
+    .has-submenu:hover > a::after {
+      transform: rotate(-90deg);
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li class="has-submenu">
+        <a href="#">Products</a>
+        <ul>
+          <li><a href="#">Computers</a></li>
+          <li><a href="#">Printers</a></li>
+          <li><a href="#">Photocopies</a></li>
+          <li><a href="#">Networks Supply</a></li>
+          <li><a href="#">Accessories</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Services</a></li>
+      <li class="has-submenu">
+        <a href="#">Promotion</a>
+        <ul>
+          <li><a href="#">Baby Promotions</a></li>
+          <li><a href="#">Giant Promotions</a></li>
+        </ul>
+      </li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+  </nav>
+</body>
 </html>
